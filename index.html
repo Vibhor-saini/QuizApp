@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container text-center mt-5">
+    <div id="rulesPage">
+      <h2>Rules of the Test:</h2>
+      <p>1. You will have 10 seconds to answer each question.</p>
+      <p>2. There are 10 questions in total.</p>
+      <h3>All the best!</h3>
+      <button class="continue-btn" onclick="showStartTestPage()">Continue</button>
+    </div>
+
+    <div id="startTestPage" style="display: none;">
+      <h3>Enter your name </h3>
+      <input type="text" id="userName" class="form-control mb-3" placeholder="Your Name">
+      <button class="start-test" onclick="startTest()">Start Test</button>
+    </div>
+
+    <div id="questionPage" style="display: none;">
+      <div class="question-container">
+        <span class="timer" id="timer">10s</span>
+        <h4 id="questionText"></h4>
+        <div id="optionsContainer"></div>
+        
+        <button class="btn btn-primary answer-btn" onclick="nextQuestion()">Next</button>
+        <button class="btn btn-danger answer-btn" onclick="submitTestButton()">Submit Test</button>
+
+      </div>
+    </div>
+
+    <div id="resultPage" style="display: none;">
+      <h3 id="resultText"></h3>
+      <button class="btn btn-success" onclick="tryAgain()">Try Again</button>
+      <button class="btn btn-info" onclick="checkAnswers()">Check Answers</button>
+      <button class="btn btn-danger" onclick="exitTest()">Exit</button>
+    </div>
+
+    <div id="checkAnswersPage" style="display: none;">
+      <button class="btn btn-danger close-btn" onclick="closeCheckAnswers()">Close</button>
+    </div>
+
+    <div id="appreciationPage" style="display: none;">
+      <h3 id="appreciationText"></h3>
+    </div>
+  </div>
+
+</body>
+</html>
