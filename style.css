@@ -1,90 +1,183 @@
+body {
+  background-color: #f8f9fa;
+}
 
-    body {
-      background-color: #f8f9fa;
-    }
-    .question-container {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
-      position: relative;
-      max-height: 700px;
-    }
-    .answer-btn {
-      width: 100%;
-      margin-top: 10px;
-    
-    }
-    .timer {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 18px;
-      color: rgb(0, 0, 0);
-    }
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 70px;
-    }
-    .btn-success {
-      background-color: #28a745;
-      color: #fff;
-    }
-    .btn-danger {
-      background-color: #dc3545;
-      color: #fff;
-    }
+.question-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  position: relative;
+  max-height: 700px;
+}
 
-    #rulesPage{
-      /* height: 400px;
-      width: 400px;
-      position: abso; */
-      margin: 50px;
-      border-radius: 20px;
-      padding: 50px;
-      border: 2px solid rgb(10, 6, 6);
-      background-color: rgb(233, 131, 14);
-    }
-    
-    #rulesPage p{
-      font-weight: bold;
+.answer-btn {
+  width: 100%;
+  margin-top: 10px;
+}
 
-    }
-   
-    .continue-btn{
-      background-color: rgb(255, 255, 255);
-      color: black;
-      padding: 6px;
-      border-radius: 5px;
-    }
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
 
-    .continue-btn:hover{
-      background-color: rgb(70, 116, 116);
-    }
-    
-    .start-test{
-      background-color: rgb(255, 255, 255);
-      color: black;
-      padding: 6px;
-      border-radius: 5px;
-    }
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 70px;
+}
 
-    .start-test:hover{
-      background-color: rgb(70, 116, 116);
-    }
-    
-    .question-container #questionText{
-        background-color: #d9e8f8;
-        /* margin: 5px; */
-        /* padding: 5px; */
-        width: 98%;
-    }
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
 
-    #timer{
-        background-color: #d9e8f8;
-        margin-top: 11px;
-        color: red;
-        font-weight: bold;
-    }
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+#rulesPage {
+  margin: 50px;
+  border-radius: 20px;
+  padding: 50px;
+  border: 2px solid rgb(10, 6, 6);
+  background-color: rgb(233, 131, 14);
+}
+
+#rulesPage p {
+  font-weight: bold;
+}
+
+.continue-btn {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.continue-btn:hover {
+  background-color: rgb(70, 116, 116);
+}
+
+.start-test {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.start-test:hover {
+  background-color: rgb(70, 116, 116);
+}
+
+.question-container #questionText {
+  background-color: #d9e8f8;
+  width: 98%;
+}
+
+#timer {
+  background-color: #d9e8f8;
+  margin-top: 11px;
+  color: red;
+  font-weight: bold;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .question-container {
+    padding: 15px;
+    max-height: none;
+    margin-top: 10px;
+  }
+
+  .timer, .close-btn {
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+  }
+
+  .close-btn {
+    right: 40px;
+  }
+
+  .answer-btn {
+    margin-top: 8px;
+    padding: 10px;
+  }
+
+  #rulesPage {
+    margin: 20px;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  #rulesPage p {
+    font-size: 16px;
+  }
+
+  .continue-btn, .start-test {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .question-container #questionText {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #timer {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-container {
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  .timer, .close-btn {
+    font-size: 14px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .answer-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #rulesPage {
+    margin: 10px;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  #rulesPage p {
+    font-size: 14px;
+  }
+
+  .continue-btn, .start-test {
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .question-container #questionText {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #timer {
+    font-size: 12px;
+    padding: 3px;
+  }
+}
