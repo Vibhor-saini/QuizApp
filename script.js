@@ -82,7 +82,7 @@
     const timerDisplay = document.getElementById('timer');
     const currentQuestionData = questions[currentQuestion];
 
-    let secondsLeft = 10;
+    let secondsLeft = 15;
     timerDisplay.innerText = `${secondsLeft}s`;
 
     // Clear existing timer
